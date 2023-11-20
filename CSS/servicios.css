@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+ /*Servicios */
+.servicios {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 95px;
+    display: flex;
+    justify-content: center;
+    background-color: #2419a9f8;
+    color: #fff;
+    padding: 10px;
+}
+
+.tab1 {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.tab1.active {
+    background-color: #fff;
+    color: #333;
+}
+
+.content2 {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.tab-content2 {
+    display: none;
+}
+
+.tab-content2.active {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .servicios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab1 {
+        width: 100%;
+    }
+}
+/* Electricidad */
+
+.container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    height: 500px;
+    margin: 15px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.intro {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background: rgba(27, 27, 27, 0.8);
+    color: white;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 10px;
+    color: white;
+    position: absolute;
+    top: 5px; 
+    left: 20px;
+   
+}
+
+p {
+    font-size: 16px; 
+    margin: 10px;
+    visibility: hidden;
+    text-align: justify;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2; 
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover .intro {
+    opacity: 1;
+}
+
+.card:hover p {
+    visibility: visible;
+}
+
+.card:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+/* Media Query para hacerlo responsive */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
